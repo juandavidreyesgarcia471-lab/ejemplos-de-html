@@ -1,142 +1,150 @@
-/* Reset básico */
+/* Reset básico: quitamos estilos que vienen por defecto en el navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Quita el espacio externo de todos los elementos */
+    padding: 0; /* Quita el espacio interno por defecto */
+    box-sizing: border-box; /* Hace que el tamaño incluya padding y borde */
 }
 
+/* Estilos generales del cuerpo */
 body {
-    font-family: Arial;
-    background: #0d0d1a;
-    color: white;
+    font-family: Arial; /* Define la fuente del texto */
+    background: #0d0d1a; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
 }
 
-/* Contenedor */
+/* Contenedor principal para centrar contenido */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 1200px; /* Máximo ancho permitido */
+    margin: auto; /* Centra el contenedor horizontalmente */
 }
 
-/* HEADER */
+/* HEADER (encabezado) */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    display: flex; /* Activa flexbox para organizar elementos */
+    justify-content: space-between; /* Separa los elementos (logo y menú) */
+    align-items: center; /* Alinea verticalmente */
+    padding: 20px 0; /* Espacio arriba y abajo */
 }
 
+/* Logo */
 .logo {
-    font-weight: bold;
-    color: #f7b733;
+    font-weight: bold; /* Texto en negrita */
+    color: #f7b733; /* Color dorado */
 }
 
-/* NAV */
+/* Lista del menú */
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    display: flex; /* Coloca los elementos en fila */
+    list-style: none; /* Quita los puntos de la lista */
+    gap: 20px; /* Espacio entre cada opción */
 }
 
+/* Links del menú */
 nav a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
 }
 
-/* BOTÓN */
+/* Botón principal */
 .btn {
-    background: #f7b733;
-    padding: 10px 20px;
-    border: none;
+    background: #f7b733; /* Color de fondo */
+    padding: 10px 20px; /* Espacio interno (arriba/abajo - lados) */
+    border: none; /* Quita el borde */
 }
 
-/* HERO */
+/* Sección principal (hero) */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: center; /* Centra el texto */
+    padding: 100px 20px; /* Espacio grande arriba y abajo */
 }
 
-/* TABLA */
+/* Tabla */
 table {
-    width: 100%;
-    margin-top: 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Espacio arriba */
 }
 
+/* Encabezados de la tabla */
 th {
-    background: #f7b733;
-    color: black;
+    background: #f7b733; /* Fondo dorado */
+    color: black; /* Texto oscuro */
 }
 
+/* Celdas de la tabla */
 td, th {
-    padding: 10px;
-    text-align: center;
+    padding: 10px; /* Espacio interno */
+    text-align: center; /* Centra el contenido */
 }
 
-/* ZONAS */
+/* Sección zonas (grid) */
 .zonas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin: 40px 0;
+    display: grid; /* Activa CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 15px; /* Espacio entre columnas */
+    margin: 40px 0; /* Espacio arriba y abajo */
 }
 
+/* Cada tarjeta de zona */
 .zona {
-    background: #1a1a2e;
-    padding: 20px;
-    text-align: center;
+    background: #1a1a2e; /* Fondo oscuro */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centra el texto */
 }
 
-/* GALERÍA */
+/* Galería de imágenes */
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: grid; /* Activa grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 10px; /* Espacio entre imágenes */
 }
 
+/* Imágenes */
 .galeria img {
-    width: 100%;
+    width: 100%; /* La imagen ocupa todo el contenedor */
 }
 
-/* FOOTER */
+/* Footer */
 footer {
-    background: #111;
-    padding: 20px;
-    margin-top: 40px;
+    background: #111; /* Fondo oscuro */
+    padding: 20px; /* Espacio interno */
+    margin-top: 40px; /* Espacio arriba */
 }
 
-/* MENÚ MÓVIL */
+/* Botón hamburguesa (móvil) */
 .menu-toggle {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
+    display: none; /* Oculto por defecto */
+    font-size: 25px; /* Tamaño del icono */
+    cursor: pointer; /* Cambia el cursor al pasar */
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
     nav {
-        display: none; /* ocultamos menú */
-        position: absolute;
-        top: 70px;
-        background: #111;
-        width: 100%;
-        left: 0;
+        display: none; /* Oculta el menú en móvil */
+        position: absolute; /* Permite ubicarlo libremente */
+        top: 70px; /* Baja el menú debajo del header */
+        background: #111; /* Fondo oscuro */
+        width: 100%; /* Ocupa todo el ancho */
+        left: 0; /* Lo pega al lado izquierdo */
     }
 
     nav ul {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Cambia a columna */
+        text-align: center; /* Centra el texto */
     }
 
     nav.active {
-        display: block; /* se muestra con JS */
+        display: block; /* Se muestra cuando JS agrega la clase */
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Muestra el botón hamburguesa */
     }
 
     .zonas, .galeria {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
     }
 }
+
